@@ -1,0 +1,29 @@
+Ques 1: Change the umask value for any user permanently.
+sol  1: vi /etc/profile
+       if [ $UID -gt 199 ] && [ " `id -gn`"="`id -un`" ];then
+           umask 023
+       else
+          umask 023
+
+Ques 2: Add a new user without using adduser & useradd command.
+sol  2: cd /home/newusername
+        chown -R username.group  
+        chmod -R go=u,go-w
+        chmod go=
+
+        passwd.
+
+Ques 3: Can we change the umask value to 0888. if yes,then how.If no they why?
+sol  3: It cannot be possible because umask maximum value 777.
+
+Ques 4: how to add a new user with  a unique user id(e.g 1345) & check out the unique id of that user.
+sol  4: #useradd -u 1345 navin
+
+       check out
+       #cat /etc/passwd/ | grep navin  
+
+Ques 5: How to change the group of any folder
+       a). After this checkout the group name of the files present in that folder.
+       b). Try to change the group of the folder & the file present in same folder using a single command.
+sol  5:   a). sudo chgrp (groupname) (filename)
+          b). sudo chgrp -R groupname filename 

@@ -1,0 +1,10 @@
+Ques 1: When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done.
+sol  1: 
+
+Ques 2: Make subdirectories inside a parent directory by using single mkdir command (refer figure given below).
+sol  2: #mkdir -p A B/C
+
+
+Ques 3: tac command vs cat command?
+sol  3: tac:- tac command is used to print the data of a file in reverse order and if we add two file from tac command it add two file in reverse oreder.
+	cat:- Cat command is Used to print the data of the file in the terminal. 
